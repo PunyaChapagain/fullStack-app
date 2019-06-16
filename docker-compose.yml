@@ -1,12 +1,17 @@
 version: '2'
 services:
-  
+  nginx:
+    restart: always
+    build:
+      context: ./nginx
+      dockerfile: dev.Dockerfile
+    ports:
+      - "80:80"
   frontend:
     build: 
       context: ./frontend
       dockerfile: dev.Dockerfile
-    ports:
-      - "3000:3000"
+    
     volumes:
       - ./frontend:/app
       - /app/node_modules
@@ -15,8 +20,7 @@ services:
     build: 
       context: ./backend/customer-api
       dockerfile: dev.Dockerfile
-    ports:
-      - "4000:4000"
+    
     volumes:
       - ./backend/customer-api:/app
       - /app/node_modules
