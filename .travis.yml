@@ -19,4 +19,17 @@ after_success:
   - docker push merodocker/multi-client
   - docker push merodocker/multi-nginx
   - docker push merodocker/multi-server
+
+deploy:
+  provider: elasticbeanstalk
+  region: ap-southeast-2
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-ap-southeast-2-439639102403
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
   
