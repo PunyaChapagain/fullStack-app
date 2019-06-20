@@ -4,7 +4,7 @@ services:
 
 before_install:
   - docker build -t merodocker/fullstack-app -f ./frontend/dev.Dockerfile ./frontend
-  - docker build -t merodocker/multi-server -f ./backend/customer-api/prod.Dockerfile ./backend
+  - docker build -t merodocker/multi-server -f ./backend/customer-api/prod.Dockerfile ./backend/customer-api
 
 script:
   - docker run -e CI=true merodocker/fullstack-app npm test -- --coverage
