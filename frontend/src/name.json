@@ -1,0 +1,22 @@
+[
+    {
+        "Name": "Name",
+        "DOB": "Date Of Birth",
+        "BirthPlace": "Birth Place"
+    },
+    {
+        "Name": "Punya Chapagain",
+        "DOB": "15 april 1984",
+        "BirthPlace": "Gobindapur"
+    },
+    {
+        "Name": "Mamata",
+        "DOB": "13 april 1986",
+        "BirthPlace": "Baliya"
+    },
+    {
+        "Name": "Bisam",
+        "DOB": "13 Jan 2017",
+        "BirthPlace": "Sydney"
+    }
+]
