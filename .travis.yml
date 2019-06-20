@@ -4,19 +4,18 @@ services:
 
 before_install:
   - docker build -t merodocker/fullstack-app -f ./frontend/dev.Dockerfile ./frontend
+  - docker build -t merodocker/multi-server ./backend/customer-api/prod.Dockerfile ./backend
 
 script:
   - docker run -e CI=true merodocker/fullstack-app npm test -- --coverage
 
 after_success:
   - docker build -t merodocker/multi-client ./frontend/prod.Dockerfile
-  - docker build -t merodocker/multi-nginx ./nginx
-  - docker build -t merodocker/multi-server ./backend/customer-api/prod.Dockerfile
+ 
   
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
   - docker push merodocker/multi-client
-  - docker push merodocker/multi-nginx
-  - docker push merodocker/multi-server
+ 
   
