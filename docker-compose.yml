@@ -1,27 +1,26 @@
-version: '2'
+version: '3'
 services:
+  
   nginx:
     restart: always
-    image: nginx:alpine
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
     ports:
-      - "80:80"
-  frontend:
-    build: 
-      context: ./frontend
-      dockerfile: dev.Dockerfile
-    
+      - '8000:80'
+  api:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./server
     volumes:
-      - ./frontend:/app
       - /app/node_modules
+      - ./server:/app
     
-  backend:
-    build: 
-      context: ./backend/customer-api
-      dockerfile: dev.Dockerfile
-    
+  client:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
     volumes:
-      - ./backend/customer-api:/app
       - /app/node_modules
-    
+      - ./client:/app
+  
