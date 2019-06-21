@@ -28,7 +28,9 @@ class App extends Component {
 
         </header>
         <h1>{this.state.name}</h1>
-        <h1>The Name of the few yakis</h1>
+        <h1>The Name of Some Fruits</h1>
+
+
 
         <div>
 
