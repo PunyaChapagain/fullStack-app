@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Family from './family'
 
-function App() {
-  return (
-    <div className="App">
-      < Family />
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Fib Calculator</h1>
+
+        </header>
+        <div>
+
+        </div>
+      </div>
+
+    );
+  }
 }
 
 export default App;
