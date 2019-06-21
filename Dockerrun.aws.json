@@ -3,21 +3,21 @@
   "containerDefinitions": [
     {
       "name": "client",
-      "image": "stephengrider/multi-client",
+      "image": "merodocker/multi-client",
       "hostname": "client",
       "essential": false,
       "memory": 128
     },
     {
       "name": "server",
-      "image": "stephengrider/multi-server",
+      "image": "merodocker/multi-server",
       "hostname": "api",
       "essential": false,
       "memory": 128
     },
     {
       "name": "nginx",
-      "image": "stephengrider/multi-nginx",
+      "image": "merodocker/multi-nginx",
       "hostname": "nginx",
       "essential": true,
       "portMappings": [
