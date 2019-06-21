@@ -24,10 +24,11 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Fib Calculator</h1>
+
 
         </header>
         <h1>{this.state.name}</h1>
+        <h1>The Name of the few yakis</h1>
 
         <div>
 
