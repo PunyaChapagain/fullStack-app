@@ -4,7 +4,21 @@ import './App.css';
 
 
 class App extends Component {
+  state = {
+    name: ""
+  }
+
+  componentDidMount() {
+    fetch("/api")
+      .then(resp => resp.json())
+      .then(data => {
+
+        this.setState({ name: data.name })
+      })
+
+  }
   render() {
+
     return (
 
       <div className="App">
@@ -13,6 +27,8 @@ class App extends Component {
           <h1 className="App-title">Fib Calculator</h1>
 
         </header>
+        <h1>{this.state.name}</h1>
+
         <div>
 
         </div>

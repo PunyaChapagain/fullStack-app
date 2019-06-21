@@ -4,7 +4,7 @@ const Port = 5000;
 
 server.get('/', function (req, resp) {
 
-  resp.send("hello Bisam");
+  resp.json({ "name": "bisam" });
 })
 
 
