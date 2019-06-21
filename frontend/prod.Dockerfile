@@ -1,9 +1,10 @@
 FROM node:alpine as builder
 WORKDIR '/app'
 COPY ./package.json ./
-RUN npm install
+COPY ./yarn.lock ./
+RUN yarn
 COPY . .
-Run npm run build
+Run yarn run build
 
 FROM nginx:alpine
 EXPOSE 3000
