@@ -6,6 +6,8 @@ export default () => {
     <div>
       Im some other page!nnn
       <Link to="/">Go back home</Link>
+      <Link to="/">Go back home</Link>
+      <Link to="/">Go back home</Link>
     </div>
   );
 };
