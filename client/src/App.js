@@ -31,7 +31,7 @@ class App extends Component {
         <h1>The Name of the few People</h1>
         <ul>
           <li>Punya</li>
-          <li>Bisam</li>
+          <li>Bisam BOy</li>
         </ul>
 
         <div>
