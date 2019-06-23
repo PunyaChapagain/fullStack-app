@@ -9,13 +9,15 @@ script:
   - docker run -e CI=true merodocker/fullstack-app npm test -- --coverage
 
 after_success:
-  - docker build -t merodocker/multi-client ./client
-  - docker build -t merodocker/multi-nginx ./nginx
-  - docker build -t merodocker/multi-server ./server
+  include:
+    if: branch = master
+    - docker build -t merodocker/multi-client ./client
+    - docker build -t merodocker/multi-nginx ./nginx
+    - docker build -t merodocker/multi-server ./server
+  - echo " hello to this world"
   # Log in to the docker CLI
 before_deploy:
-  - echo " ia am here before condition"
-  - echo " i am after if statement"
+  
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
   - docker push merodocker/multi-client
