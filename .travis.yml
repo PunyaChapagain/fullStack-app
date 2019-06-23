@@ -13,6 +13,13 @@ after_success:
   - docker build -t merodocker/multi-nginx ./nginx
   - docker build -t merodocker/multi-server ./server
   # Log in to the docker CLI
+
+jobs:
+  include:
+    - # require the branch name to be master (note for PRs this is the base branch name)
+      if: branch = master
+      - echo " hello " everyone
+        -"helll to you"
 before_deploy:
   
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
