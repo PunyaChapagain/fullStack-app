@@ -9,12 +9,9 @@ script:
   - docker run -e CI=true merodocker/fullstack-app npm test -- --coverage
 
 after_success:
-  include:
-    if: branch = master
-    - docker build -t merodocker/multi-client ./client
-    - docker build -t merodocker/multi-nginx ./nginx
-    - docker build -t merodocker/multi-server ./server
-  - echo " hello to this world"
+  - docker build -t merodocker/multi-client ./client
+  - docker build -t merodocker/multi-nginx ./nginx
+  - docker build -t merodocker/multi-server ./server
   # Log in to the docker CLI
 before_deploy:
   
