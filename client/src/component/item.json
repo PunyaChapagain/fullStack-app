@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Computer Starter Kit",
+        "description": "This is the best computer money can buy, if you don’t have much money.",
+        "image": "https://www.w3.org/TR/css-flexbox-1/images/computer.jpg",
+        "alt": "You get a white computer with matching peripherals",
+        "lists": [
+            "apple is a good fruiterev erteterte",
+            "orange",
+            "grapes"
+        ]
+    },
+    {
+        "name": "Printer",
+        "description": "Only capable of printing ascii",
+        "image": "https://www.w3.org/TR/css-flexbox-1/images/printer.png",
+        "alt": "Printer",
+        "lists": [
+            "apple",
+            "orange",
+            "grapes"
+        ]
+    },
+    {
+        "name": "Laser Printer",
+        "description": "This is the best computer money can buy, if you don’t have much money.",
+        "image": "https://www.w3.org/TR/css-flexbox-1/images/printer.png",
+        "alt": "Laser with a good quality",
+        "lists": [
+            "apple",
+            "orange",
+            "grapes"
+        ]
+    },
+    {
+        "name": "Computer Starter Kit",
+        "description": "This is the best computer money can buy, if you don’t have much money.",
+        "image": "https://www.w3.org/TR/css-flexbox-1/images/computer.jpg",
+        "alt": "You get: a white computer with matching peripherals",
+        "lists": [
+            "apple",
+            "orange",
+            "grapes"
+        ]
+    },
+    {
+        "name": "Printer",
+        "description": "Only capable of printing ascii",
+        "image": "https://www.w3.org/TR/css-flexbox-1/images/printer.png",
+        "alt": "Printer",
+        "lists": [
+            "apple",
+            "orange",
+            "grapes"
+        ]
+    },
+    {
+        "name": "Laser Printer",
+        "description": "This is the best computer money can buy, if you don’t have much money.",
+        "image": "https://www.w3.org/TR/css-flexbox-1/images/printer.png",
+        "alt": "Laser with a good quality",
+        "lists": [
+            "apple",
+            "orange",
+            "grapes"
+        ]
+    }
+]
